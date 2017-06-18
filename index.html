@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Home Page</title>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="jsFolder/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+<script src="jsFolder/nvd3-master/build/nv.d3.js"></script>
+
+<script src="jsFolder/jquery-csv-master/src/jquery.csv.js"></script>
+
+<script src="jsFolder/moment.js"></script>
+<script src="jsFolder/chartToView.js"></script>
+
+
+
+<style>
+        text {
+            font: 12px sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        html, body, #chart1, svg ,container{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .dashed {
+            stroke-dasharray: 5,5;
+        }
+        .nv-area { 
+            fill: #ccd9ff 
+        }
+        
+</style>
+
+<style>
+    
+
+    .jumbotron{
+        background-color: #3d3c3c!important;
+        color: white;
+    }
+
+
+</style>
+
+</head>
+<body style="background-color: #">
+
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container ">
+            <h1>DELL EMC HOMEWORK</h1> 
+            <p>Assignment No 2 - TimeSeries data</p>
+            <p>Itamar Fred Avrahami</p> 
+        </div>
+    </div>
+    <div class="container-fliud">
+        <div >
+            <h1><b>How to use?</b></h1>
+            <p> 1.Hover over a certain point to display tooltip with information about Time ( X Axis ) and Value( Y Axis ) .</p>
+            <p> 2.To zoom into a particular section, use the Zoom Finder Chart ( Under the first chart)  . </p>
+            <p>  you can Drag the section left and right, or Resize in and out.
+            <p> 3.In Case you want to display the Default view ( zoom out ) - press on the 'Zoom out to default' button .</p>
+            <p> 4.In case you click on point, in addition to tooltip, its details will show above the chart.</p>
+        </div>
+    </div>
+    <div id="loaderDiv" class="text-center" style="display: none;">
+
+        <p><img src="load.gif"/> Please Wait, loading chart </p>
+        
+    </div>
+
+    <div class="text-center">
+
+        <span id="pDetails" ></span>
+        
+    </div>
+
+    <div class="text-center">
+        
+                <button id="fullbtn" type="button" class="btn btn-primary">Full data</button>
+                <button id="partbtn" type="button" class="btn btn-success">partial data</button>
+       
+    </div>
+
+    
+   
+
+    <div id="chart1" class='with-3d-shadow with-transitions'>
+        
+    </div>
+
+    <div class="text-center">
+        
+        <button class="btn btn-info" id="target" >Zoom out to default</button>
+
+    </div>
+
+
+
+</body>
+</html>
